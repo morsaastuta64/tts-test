@@ -1,0 +1,5 @@
+QWEN
+
+FINETUNE
+python feed.py --device cuda:0 --tokenizer_model_path Qwen/Qwen3-TTS-Tokenizer-12Hz --input_jsonl input.jsonl --output_jsonl output.jsonl
+python train.py --init_model_path Qwen/Qwen3-TTS-12Hz-1.7B-Base --output_model_path output --train_jsonl output.jsonl --batch_size 32 --lr 2e-6 --num_epochs 10 --speaker_name speaker
